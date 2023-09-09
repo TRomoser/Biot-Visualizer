@@ -8,7 +8,7 @@ This project is a visualizer for the OAP. It is a web application that allows us
 
 ## Contributors
 
-Frank Casseus
-Taylor Romoser
-Jason Pohl
+- Frank Casseus
+- Taylor Romoser
+- Jason Pohl
 
