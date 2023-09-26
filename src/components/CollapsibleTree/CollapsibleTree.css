@@ -3,7 +3,13 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  background-color: hsl(219, 48%, 8%);
+  background: linear-gradient(
+        hsl(219, 48%, 8%),    /* Start color */
+        hsl(219, 48%, 8%) 40%,  /* Predominant color up to 40% */
+        hsla(60, 32.2%, 41.6%, 1) 50%, /* Light accent at 50% */
+        hsl(219, 48%, 8%) 70%,  /* Transition back to predominant color by 70% */
+        hsl(0, 0%, 20%)     /* End color: dark grey */
+    );
 }
 
 .ReactModal__Overlay {
@@ -23,7 +29,7 @@
   position: relative;
   top: 50%;
   left: 50%;
-  background-color: rgb(93, 94, 96, 1.0);
+  background-color: hsl(219, 48%, 8%);
   transform: translate(-50%, -50%);
   width: 400px; 
   padding: 30px; 

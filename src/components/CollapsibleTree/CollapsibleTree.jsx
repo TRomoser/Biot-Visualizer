@@ -32,6 +32,7 @@ export default function CollapsibleTree({ data }) {
                 shortName: node.shortName,
                 description: node.description,
                 isBase: node.isBase,
+                extendedBy: node.extendedBy,
                 children: children.map(buildNode),
             };
         };
@@ -223,7 +224,7 @@ export default function CollapsibleTree({ data }) {
         <div className="card-body">
           <h3>{selectedNode?.data?.description || 'No description available.'}</h3>
           <div className="tags">
-            {selectedNode?.data.children?.map((c) => <span className='attribute-tag badge' key={c.code}>{c.code}</span>)}
+            {selectedNode?.data.extendedBy?.map((c) => <span className='attribute-tag badge' key={c.code}>{c.code}</span>)}
           </div>
         </div>
 
