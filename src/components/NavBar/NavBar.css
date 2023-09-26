@@ -1,0 +1,19 @@
+.navbar {
+  background: linear-gradient(to bottom, #000, rgba(55, 65, 62, 0.5), transparent);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  color: #FFF;
+}
+
+
+.navbar > * {
+  text-decoration: none;
+  padding: 0 50px;
+  color: #FFF;
+}

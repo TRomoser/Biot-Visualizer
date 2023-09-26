@@ -1,3 +1,5 @@
 .DataCard {
   outline: auto 1px rgb(77, 144, 254);
+  border-radius: 10px;
+  padding: 0 5px 0 5px;
 }

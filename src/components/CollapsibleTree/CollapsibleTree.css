@@ -1,0 +1,110 @@
+.collapsibleTree {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: hsl(219, 48%, 8%);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(93, 94, 96, 1.0);
+  transform: translate(-50%, -50%);
+  width: 400px; 
+  padding: 30px; 
+  border: 3px solid #555; 
+  color: #FFF;
+  border-radius: 8px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+  overflow: auto; 
+  max-height: 80vh; 
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.media {
+  display: flex;
+  align-items: center;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.modal h2 {
+  border-bottom: 2px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.modal h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.modal p {
+  margin-bottom: 20px;
+}
+
+.modal > p:nth-child(even) {
+  background-color: #8D8D92; 
+  padding: 5px 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 5px;
+}
+
+.attribute-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #8D8D92;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.modal-close {
+  display: block;
+  margin-top: 15px;
+  background-color: #8D8D92;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer; 
+  float: right; 
+  transition: background-color 0.3s;
+}
+
+.modal-close:hover {
+  background-color: #6D6D77;
+}

@@ -11,19 +11,30 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    
     const equipmentQuery = `
-      query Versions {
-        equipment(version: "1.1") {
-            name
-        }
-    }
+    query Tags {
+      equipment(version: "1.1") {
+          code
+          name
+          shortName
+          description
+          isBase
+          extends
+          extendedBy {
+              code
+              name
+              shortName
+              description
+              isBase
+          }
+      }
+  }
   `;
     const fetchQueryData = async () => {
       const url = 'https://oap.cloud.buildingsiot.com/api'
       const data = await fetchData(url, equipmentQuery);
       setData(data);
-      // console.log('data', data);
+      console.table('Data-object app', data);
     };
     fetchQueryData();
   }, []);
@@ -33,7 +44,7 @@ function App() {
       {/* implement Login via -> user ? NavBar & Routes : AuthPage */}
       <NavBar />
       <Routes>
-        {data ? <Route path="/" element={<HomePage data={data.equipment} />} /> : <Route path='/' element={<HomePage />} />}
+        {data ? <Route path="/" element={<HomePage data={data} />} /> : <Route path='/' element={<HomePage />} />}
         <Route path="/about" element={<AboutPage />} />
       </Routes>
     </div>
